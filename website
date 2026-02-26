@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hood Canal Haven | Beach House Rental in Quilcene, WA</title>
+  <meta name="description" content="A dreamy 3-bed, 3-bath waterfront retreat on Hood Canal in Quilcene, Washington. Private beach access, forest views, bald eagles & porpoises. Book on Airbnb or VRBO." />
+  <meta name="keywords" content="Hood Canal vacation rental, Quilcene beach house, Hood Canal Haven, Hood Canal getaway, Washington beach rental, Hood Canal cabin" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hood Canal Haven | Beach House Rental" />
+  <meta property="og:description" content="Waterfront retreat on Hood Canal. Private beach, forest, eagles & porpoises. Sleeps 8." />
+  <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/41e7634c-249b-43dd-b52a-a59b033c0f20.jpeg?im_w=1280" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest: #2c3d2e;
+      --water: #4a7c8e;
+      --sand: #e8dfd0;
+      --mist: #f4f0eb;
+      --bark: #6b5a47;
+      --white: #fdfcfa;
+      --text: #2a2420;
+      --accent: #7aab8e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      background: transparent;
+      transition: background 0.4s, backdrop-filter 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(253,252,250,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(44,61,46,0.1);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav.scrolled .nav-logo { color: var(--forest); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav.scrolled .nav-links a { color: var(--forest); }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-book {
+      background: var(--white);
+      color: var(--forest) !important;
+      padding: 0.5rem 1.4rem;
+      border-radius: 2px;
+      font-weight: 500 !important;
+      transition: background 0.3s, color 0.3s !important;
+    }
+    .nav-book:hover { background: var(--accent) !important; color: var(--white) !important; }
+    nav.scrolled .nav-book { background: var(--forest); color: var(--white) !important; }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 5rem 3rem;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/41e7634c-249b-43dd-b52a-a59b033c0f20.jpeg?im_w=1280');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.05);
+      animation: heroZoom 12s ease-out forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to { transform: scale(1.0); }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,30,22,0.85) 0%, rgba(20,30,22,0.3) 50%, transparent 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      animation: fadeUp 1.2s ease-out 0.3s both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-primary:hover { background: #5d9478; transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.6);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--forest);
+      display: flex;
+      justify-content: center;
+      gap: 0;
+    }
+    .stat {
+      flex: 1;
+      max-width: 200px;
+      padding: 1.8rem 1rem;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      animation: fadeUp 0.8s ease-out both;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.35rem;
+    }
+
+    /* SECTION COMMONS */
+    section { padding: 6rem 3rem; }
+    .section-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--forest);
+      margin-bottom: 1.5rem;
+    }
+    h2 em { font-style: italic; color: var(--water); }
+
+    /* INTRO / ABOUT */
+    .about {
+      background: var(--mist);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #4a3f38;
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+    .about-img {
+      position: relative;
+      height: 520px;
+    }
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-img::before {
+      content: '';
+      position: absolute;
+      top: -20px; right: -20px;
+      width: 60%;
+      height: 60%;
+      border: 2px solid var(--accent);
+      z-index: 0;
+    }
+    .about-img img { position: relative; z-index: 1; }
+
+    /* GALLERY */
+    .gallery { background: var(--white); padding: 6rem 0; }
+    .gallery-header { padding: 0 3rem; margin-bottom: 2.5rem; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 280px 280px;
+      gap: 6px;
+      padding: 0 3rem;
+    }
+    .gallery-grid .g1 { grid-column: 1 / 6; grid-row: 1 / 2; }
+    .gallery-grid .g2 { grid-column: 6 / 9; grid-row: 1 / 2; }
+    .gallery-grid .g3 { grid-column: 9 / 13; grid-row: 1 / 3; }
+    .gallery-grid .g4 { grid-column: 1 / 4; grid-row: 2 / 3; }
+    .gallery-grid .g5 { grid-column: 4 / 6; grid-row: 2 / 3; }
+    .gallery-grid .g6 { grid-column: 6 / 9; grid-row: 2 / 3; }
+    .gallery-item {
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* AMENITIES */
+    .amenities { background: var(--sand); }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .amenity-card {
+      background: var(--white);
+      padding: 1.8rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .amenity-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(44,61,46,0.1); }
+    .amenity-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .amenity-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--forest);
+      letter-spacing: 0.05em;
+    }
+    .amenity-desc {
+      font-size: 0.8rem;
+      color: #7a6b60;
+      margin-top: 0.3rem;
+      font-weight: 300;
+    }
+
+    /* BEDROOMS */
+    .bedrooms { background: var(--white); }
+    .bedroom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .bedroom-card { position: relative; overflow: hidden; }
+    .bedroom-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .bedroom-card:hover img { transform: scale(1.04); }
+    .bedroom-info {
+      padding: 1.2rem 0;
+    }
+    .bedroom-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--forest);
+    }
+    .bedroom-info p {
+      font-size: 0.82rem;
+      color: var(--bark);
+      margin-top: 0.3rem;
+      font-weight: 300;
+    }
+
+    /* CALENDAR */
+    .calendar-section {
+      background: var(--forest);
+      color: var(--white);
+      text-align: center;
+    }
+    .calendar-section h2 { color: var(--white); }
+    .calendar-section h2 em { color: var(--accent); }
+    .calendar-section .section-tag { color: var(--accent); }
+    .calendar-wrap {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .cal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .cal-nav {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      width: 36px; height: 36px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .cal-nav:hover { background: rgba(255,255,255,0.1); }
+    .cal-month-year {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0;
+    }
+    .cal-day-name {
+      padding: 0.8rem;
+      text-align: center;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .cal-day {
+      padding: 0.9rem 0.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 300;
+      border: 0.5px solid rgba(255,255,255,0.04);
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .cal-day.empty { color: transparent; }
+    .cal-day.booked {
+      background: rgba(122,171,142,0.25);
+      color: var(--accent);
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+    .cal-day.today {
+      background: rgba(255,255,255,0.1);
+      font-weight: 500;
+    }
+    .cal-legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .cal-legend span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cal-legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .dot-available { background: rgba(255,255,255,0.3); }
+    .dot-booked { background: var(--accent); opacity: 0.6; }
+    .cal-note {
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* REVIEWS */
+    .reviews { background: var(--mist); }
+    .reviews-stars {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #d4a843;
+    }
+    .reviews-summary {
+      font-size: 1rem;
+      color: var(--bark);
+      margin-bottom: 3rem;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-card {
+      background: var(--white);
+      padding: 2rem;
+      border-top: 3px solid var(--accent);
+    }
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #4a3f38;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 1.2rem;
+    }
+    .review-author {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bark);
+      font-weight: 500;
+    }
+
+    /* LOCATION */
+    .location-section {
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .location-map {
+      height: 420px;
+      background: var(--sand);
+      overflow: hidden;
+    }
+    .location-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(30%) contrast(1.05);
+    }
+    .nearby-list { margin-top: 2rem; }
+    .nearby-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(44,61,46,0.08);
+      font-size: 0.9rem;
+    }
+    .nearby-item .place { color: var(--forest); font-weight: 400; }
+    .nearby-item .dist { color: var(--bark); font-weight: 300; font-size: 0.82rem; }
+
+    /* BOOKING CTA */
+    .booking-cta {
+      background: var(--sand);
+      text-align: center;
+      padding: 7rem 3rem;
+    }
+    .booking-cta h2 { margin-bottom: 1rem; }
+    .booking-cta p {
+      font-size: 1rem;
+      color: var(--bark);
+      max-width: 480px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    .booking-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+    .btn-airbnb {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.4rem;
+      background: #ff5a5f;
+      color: white;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-airbnb:hover { background: #e04e53; transform: translateY(-2px); }
+    .btn-vrbo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.4rem;
+      background: #1c5bff;
+      color: white;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-vrbo:hover { background: #0e4de0; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      background: var(--forest);
+      color: rgba(255,255,255,0.6);
+      padding: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      font-weight: 300;
+    }
+    footer p { font-size: 0.78rem; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem; right: 2rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 4rem 1.5rem; }
+      .about, .location-section { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-img { height: 350px; }
+      .about-img::before { display: none; }
+      .bedroom-grid { grid-template-columns: 1fr; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-grid .g1, .gallery-grid .g2, .gallery-grid .g3,
+      .gallery-grid .g4, .gallery-grid .g5, .gallery-grid .g6 {
+        grid-column: auto;
+        grid-row: auto;
+      }
+      .stats-bar { flex-wrap: wrap; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Hood Canal Haven</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#availability">Availability</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#book" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Quilcene, Washington · Hood Canal</div>
+    <h1>Beach, Forest,<br><em>Oh My.</em></h1>
+    <p class="hero-sub">A one-of-a-kind waterfront retreat where bald eagles soar overhead, porpoises play in the Canal, and the forest meets the sea. Sleeps 8 · Private beach access · 3 bed · 3 bath.</p>
+    <div class="hero-ctas">
+      <a href="#book" class="btn-primary">Check Availability</a>
+      <a href="#gallery" class="btn-outline">See the Home</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">★ 4.75</div><div class="stat-label">Guest Rating</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Bedrooms</div></div>
+  <div class="stat"><div class="stat-num">8</div><div class="stat-label">Guests</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Bathrooms</div></div>
+  <div class="stat"><div class="stat-num">20+</div><div class="stat-label">5-Star Reviews</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-text">
+    <div class="section-tag">The Haven</div>
+    <h2>Your waterfront <em>escape</em> awaits</h2>
+    <p>Nestled where ancient forest meets the calm waters of Hood Canal, Hood Canal Haven is a charming 3-bedroom, 3-bathroom retreat that blends nostalgic character with modern comfort.</p>
+    <p>Wake up to porpoises in the Canal. Watch bald eagles circle above the treeline. Spend your afternoons on the private beach, then gather around the outdoor fireplace as the sun dips behind the Olympics.</p>
+    <p>With Tempurpedic beds, a fully stocked gourmet kitchen, and beach access just steps away, this is where real relaxation happens.</p>
+    <a href="#book" class="btn-primary" style="margin-top: 1rem;">Book Your Stay</a>
+  </div>
+  <div class="about-img">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/2827fd18-0161-41e7-a2b8-e97443846ff3.jpeg?im_w=1280" alt="Hood Canal Haven exterior" />
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <div class="section-tag">The Space</div>
+    <h2>Life looks good <em>here</em></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item g1" onclick="openLightbox(this)">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/41e7634c-249b-43dd-b52a-a59b033c0f20.jpeg?im_w=1280" alt="Beach view" />
+    </div>
+    <div class="gallery-item g2" onclick="openLightbox(this)">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/a2cbdd51-0b19-4c47-aca5-120e3328dc72.jpeg?im_w=1280" alt="Interior" />
+    </div>
+    <div class="gallery-item g3" onclick="openLightbox(this)">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/339d1670-f189-44e3-adb8-588aae66b5f3.jpeg?im_w=1280" alt="Bedroom" />
+    </div>
+    <div class="gallery-item g4" onclick="openLightbox(this)">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/a2fed7f6-11d7-4e50-8c69-b13c86992b1d.jpeg?im_w=1280" alt="Forest view" />
+    </div>
+    <div class="gallery-item g5" onclick="openLightbox(this)">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/c89c7b60-0e09-47b4-a14c-7eb40d6916a3.jpeg?im_w=1280" alt="Bedroom 1" />
+    </div>
+    <div class="gallery-item g6" onclick="openLightbox(this)">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/dbc1bc1e-9645-472d-9f73-36ea94d0a310.jpeg?im_w=1280" alt="Bedroom 2" />
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Photo" />
+</div>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+  <div class="section-tag">What's Included</div>
+  <h2>Everything you <em>need</em></h2>
+  <div class="amenities-grid">
+    <div class="amenity-card">
+      <div class="amenity-icon">🏖️</div>
+      <div class="amenity-name">Private Beach Access</div>
+      <div class="amenity-desc">Stairs or boat ramp down to Hood Canal</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🛏️</div>
+      <div class="amenity-name">Tempurpedic Beds</div>
+      <div class="amenity-desc">2 Kings & 1 Queen — sleep like royalty</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🍳</div>
+      <div class="amenity-name">Gourmet Kitchen</div>
+      <div class="amenity-desc">Vitamix, air fryer, espresso press & more</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🔥</div>
+      <div class="amenity-name">Outdoor Fireplace</div>
+      <div class="amenity-desc">Perfect for s'mores under the stars</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🐾</div>
+      <div class="amenity-name">Pet Friendly</div>
+      <div class="amenity-desc">Fenced yard for your furry companions</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🦅</div>
+      <div class="amenity-name">Wildlife Viewing</div>
+      <div class="amenity-desc">Bald eagles, porpoises & harbor seals</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🪵</div>
+      <div class="amenity-name">Smoker & Gas Grill</div>
+      <div class="amenity-desc">BBQ lovers welcome</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🎲</div>
+      <div class="amenity-name">Games & Puzzles</div>
+      <div class="amenity-desc">Board games for the whole family</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🔑</div>
+      <div class="amenity-name">Self Check-In</div>
+      <div class="amenity-desc">Keypad entry — arrive on your schedule</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">👶</div>
+      <div class="amenity-name">Baby Friendly</div>
+      <div class="amenity-desc">Crib with Nanit stand available</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🌊</div>
+      <div class="amenity-name">Canal & Bay Views</div>
+      <div class="amenity-desc">Wake up to water views every morning</div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🚿</div>
+      <div class="amenity-name">Bidet</div>
+      <div class="amenity-desc">Modern luxury in the primary bath</div>
+    </div>
+  </div>
+</section>
+
+<!-- BEDROOMS -->
+<section class="bedrooms">
+  <div class="section-tag">Sleep</div>
+  <h2>Three rooms, <em>endless rest</em></h2>
+  <div class="bedroom-grid">
+    <div class="bedroom-card">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/c89c7b60-0e09-47b4-a14c-7eb40d6916a3.jpeg?im_w=1280" alt="Bedroom 1" />
+      <div class="bedroom-info">
+        <h3>Primary Suite</h3>
+        <p>King Tempurpedic · Crib available · Bidet en suite</p>
+      </div>
+    </div>
+    <div class="bedroom-card">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/dbc1bc1e-9645-472d-9f73-36ea94d0a310.jpeg?im_w=1280" alt="Bedroom 2" />
+      <div class="bedroom-info">
+        <h3>Family Room</h3>
+        <p>Queen Tempurpedic · Bunk bed · Sleeps 4</p>
+      </div>
+    </div>
+    <div class="bedroom-card">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-968511318956336778/original/defd1fc5-4e79-4185-b6c4-4759baf1091c.jpeg?im_w=1280" alt="Bedroom 3" />
+      <div class="bedroom-info">
+        <h3>Guest Suite</h3>
+        <p>King Tempurpedic · Private bath</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar-section" id="availability">
+  <div class="section-tag">Availability</div>
+  <h2>Check <em>open dates</em></h2>
+  <p style="color:rgba(255,255,255,0.6); font-weight:300; margin-bottom:0.5rem;">Calendar shown for reference — click Book Now to confirm dates on Airbnb or VRBO.</p>
+
+  <div class="calendar-wrap">
+    <div class="cal-header">
+      <button class="cal-nav" onclick="changeMonth(-1)">‹</button>
+      <div class="cal-month-year" id="cal-title"></div>
+      <button class="cal-nav" onclick="changeMonth(1)">›</button>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+    <div class="cal-legend">
+      <span><span class="cal-legend-dot dot-available"></span> Available</span>
+      <span><span class="cal-legend-dot dot-booked"></span> Booked</span>
+    </div>
+  </div>
+  <p class="cal-note">For real-time availability, book directly on Airbnb or VRBO below.</p>
+  <div style="margin-top:2.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="https://www.airbnb.com/rooms/968511318956336778" target="_blank" class="btn-airbnb">Book on Airbnb</a>
+    <a href="https://www.vrbo.com/3637614" target="_blank" class="btn-vrbo">Book on VRBO</a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-tag">Guest Love</div>
+  <h2>What guests are <em>saying</em></h2>
+  <div class="reviews-stars">★★★★★</div>
+  <div class="reviews-summary">4.75 out of 5 · 20 reviews on Airbnb</div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-text">"Such a unique and magical place. We saw porpoises from the beach on our first morning. The house has so much character and the beds were incredibly comfortable. We didn't want to leave."</div>
+      <div class="review-author">— Airbnb Guest</div>
+    </div>
+    <div class="review-card">
+      <div class="review-text">"Perfect family getaway. The kids loved the beach access and the bunk beds. The fenced yard was great for our dog. We'll definitely be back next summer."</div>
+      <div class="review-author">— Airbnb Guest</div>
+    </div>
+    <div class="review-card">
+      <div class="review-text">"Hood Canal doesn't get more peaceful than this. Sat by the outdoor fireplace every night watching the stars. The kitchen had everything we needed for a full week."</div>
+      <div class="review-author">— Airbnb Guest</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section">
+  <div>
+    <div class="section-tag">Location</div>
+    <h2>Quilcene, <em>Washington</em></h2>
+    <p style="font-weight:300; color:#4a3f38; line-height:1.8; margin-bottom:1.5rem;">Nestled on the western shore of Hood Canal on the Olympic Peninsula — one of the Pacific Northwest's most spectacular and unspoiled stretches of coastline.</p>
+    <div class="nearby-list">
+      <div class="nearby-item"><span class="place">🚤 Hood Canal boat ramp</span><span class="dist">On property</span></div>
+      <div class="nearby-item"><span class="place">🦪 Quilcene Bay oysters</span><span class="dist">5 min</span></div>
+      <div class="nearby-item"><span class="place">🌲 Olympic National Park</span><span class="dist">30 min</span></div>
+      <div class="nearby-item"><span class="place">⛴️ Kingston Ferry to Seattle</span><span class="dist">45 min</span></div>
+      <div class="nearby-item"><span class="place">🏙️ Seattle</span><span class="dist">~2 hours</span></div>
+    </div>
+  </div>
+  <div class="location-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10000!2d-122.88!3d47.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490e6f93c5e7c3f%3A0x1!2sQuilcene%2C%20WA!5e0!3m2!1sen!2sus!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      title="Hood Canal Haven location">
+    </iframe>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="booking-cta" id="book">
+  <div class="section-tag">Ready to Escape?</div>
+  <h2>Book your <em>Haven</em></h2>
+  <p>Secure your dates on Airbnb or VRBO. We can't wait to host you on the Canal.</p>
+  <div class="booking-buttons">
+    <a href="https://www.airbnb.com/rooms/968511318956336778" target="_blank" class="btn-airbnb">
+      🏠 Book on Airbnb
+    </a>
+    <a href="https://www.vrbo.com/3637614" target="_blank" class="btn-vrbo">
+      🏡 Book on VRBO
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Hood Canal Haven</div>
+  <p>Quilcene, Washington · Hood Canal</p>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#book">Book</a>
+  </div>
+</footer>
+
+<script>
+  // NAV scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // LIGHTBOX
+  function openLightbox(el) {
+    const src = el.querySelector('img').src;
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  // CALENDAR — live iCal feed from Airbnb
+  const ICAL_URL = 'https://www.airbnb.com/calendar/ical/968511318956336778.ics?t=0f1cf6752af24cd086ed7fbce4657671&locale=en';
+  const PROXY = 'https://api.allorigins.win/get?url=';
+
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  let currentDate = new Date();
+  let viewYear = currentDate.getFullYear();
+  let viewMonth = currentDate.getMonth();
+  let bookedRanges = [];
+
+  async function loadIcal() {
+    try {
+      const res = await fetch(PROXY + encodeURIComponent(ICAL_URL));
+      const data = await res.json();
+      bookedRanges = parseIcal(data.contents);
+    } catch(e) {
+      console.warn('Could not load iCal feed:', e);
+    }
+    renderCalendar();
+  }
+
+  function parseIcal(text) {
+    const ranges = [];
+    const lines = text.replace(/\r\n[ \t]/g, '').split(/\r?\n/);
+    let dtstart = null, dtend = null;
+    for (const line of lines) {
+      if (line.startsWith('DTSTART')) {
+        dtstart = parseIcalDate(line.split(':')[1]);
+      } else if (line.startsWith('DTEND')) {
+        dtend = parseIcalDate(line.split(':')[1]);
+      } else if (line === 'END:VEVENT' && dtstart && dtend) {
+        ranges.push({ start: dtstart, end: dtend });
+        dtstart = null; dtend = null;
+      }
+    }
+    return ranges;
+  }
+
+  function parseIcalDate(str) {
+    str = (str || '').trim();
+    const y = +str.slice(0,4), m = +str.slice(4,6)-1, d = +str.slice(6,8);
+    return new Date(y, m, d);
+  }
+
+  function isBooked(year, month, day) {
+    const date = new Date(year, month, day);
+    return bookedRanges.some(r => date >= r.start && date < r.end);
+  }
+
+  function renderCalendar() {
+    const title = document.getElementById('cal-title');
+    const grid = document.getElementById('cal-grid');
+    title.textContent = `${months[viewMonth]} ${viewYear}`;
+    grid.innerHTML = '';
+
+    days.forEach(d => {
+      const el = document.createElement('div');
+      el.className = 'cal-day-name';
+      el.textContent = d;
+      grid.appendChild(el);
+    });
+
+    const firstDay = new Date(viewYear, viewMonth, 1).getDay();
+    const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+    const today = new Date();
+
+    for (let i = 0; i < firstDay; i++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day empty';
+      el.textContent = '.';
+      grid.appendChild(el);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day';
+      el.textContent = d;
+      if (isBooked(viewYear, viewMonth, d)) el.classList.add('booked');
+      if (d === today.getDate() && viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
+        el.classList.add('today');
+      }
+      grid.appendChild(el);
+    }
+  }
+
+  function changeMonth(dir) {
+    viewMonth += dir;
+    if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+    if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+    renderCalendar();
+  }
+
+  loadIcal();
+</script>
+</body>
+</html>
